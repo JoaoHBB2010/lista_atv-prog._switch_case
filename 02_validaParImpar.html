@@ -6,11 +6,25 @@
     */
 
     //ENTRADA
+    const numero = Number(prompt("Informe um numero inteiro"))
 
-    
+
     //PROCESSAMENTO
+    const par = (numero % 2)
 
-    
+    switch (par == 0) {
+        case true:
+            alert("Par")
+            break;
+
+        case false:
+            alert("Impar")
+            break
+
+        default:
+            alert("DadosInválidos")
+            break;
+    }
     //SAÍDA
 
 </script>

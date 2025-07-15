@@ -9,11 +9,87 @@
     */
 
     //ENTRADA
+    const n1 = Number(prompt("Imforme um numero"))
+    const n2 = Number(prompt("Informe outro numero"))
+
+    const operacao = prompt("Qual operação deseja realizar? D-Divisão, M-Multiplicação, A-Adição ou S-Subtração")
 
 
     //PROCESSAMENTO
+    let resultado = 0
 
-    
+    switch (operacao == "D") {
+        case true:
+            resultado = n1 / n2
+
+            break;
+
+        case false:
+            switch (operacao == "M") {
+                case true:
+                    resultado = n1 * n2
+
+                    break
+                case false:
+                    switch (operacao == "A") {
+                        case true:
+                            resultado = n1 + n2
+                            break
+                        case false:
+                            switch (operacao == "S") {
+                                case true:
+                                    resultado = n1 - n2
+                            }
+
+
+                    }
+            }
+
+        default:
+            alert("Dados Inválidos")
+            break;
+    }
+
+    const par = resultado % 2
+    let mensagemPar = ""
+    let mensagemPositivo = ""
+    let decimal = ""
+
+
+    switch (par == 0) {
+        case true:
+            mensagemPar = "È Par"
+            break;
+
+        default:
+            mensagemPar = "È Impar"
+            break;
+    }
+
+    switch (resultado > 0) {
+        case true:
+            mensagemPositivo = "Positivo"
+            break;
+
+        default:
+            mensagemPositivo = "Negativo"
+            break;
+    }
+
+    switch ((resultado % 1) == 0) {
+        case true:
+            decimal = "Inteiro"
+            break;
+
+        default:
+            decimal = "Decimal"
+            break;
+    }
+
+
+
     //SAÍDA
+
+    document.write(`O resultado foi R$ ${resultado.toFixed(2)} e este numero é ${mensagemPar},${mensagemPositivo} e ${decimal}`)
 
 </script>
