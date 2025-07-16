@@ -1,17 +1,95 @@
-<meta charset="UTF-8">
+<meta charset="UTF-8" />
 <script>
-    /*
+  /*
     PROBLEMA: ESTAÇÃO DO ANO
     Faça um script que pergunte para a pessoa em qual hemisfério ela está e qual o mês atual.
     De acordo com as respostas, informe qual a estação do ano correspondente.
     */
 
-    //ENTRADA
+  //ENTRADA
+  const hemisferio = prompt("Em qual hemisfério você mora?S-sul ou N-norte").toUpperCase();
+  const mes = Number(prompt("Em qual mês você está? (Em números)"));
 
-    
-    //PROCESSAMENTO
+  //PROCESSAMENTO
 
+  let estacao = "";
+  let mensagem = "";
 
-    //SAÍDA
+  switch (hemisferio == "S") {
+    case mes == 1:
+      estacao = "verão";
+      break;
+    case mes == 12:
+      estacao = "verão";
+      break;
+    case mes == 2:
+      estacao = "verão";
+      break;
+    case mes == 3:
+      estacao = "verão";
+      break;
+    case mes == 4:
+      estacao = "outono";
+      break;
+    case mes == 5:
+      estacao = "outono";
+      break;
+    case mes == 6:
+      estacao = "outono";
+      break;
+    case mes == 7:
+      estacao = "inverno";
+      break;
+    case mes == 8:
+      estacao = "inverno";
+      break;
+    case mes == 9:
+      estacao = "primavera";
+      break;
+    case mes == 10:
+      estacao = "primavera";
+      break;
+    case mes == 11:
+      estacao = "primavera";
+      break;
+  }
+  switch (hemisferio == "N") {
+    case mes == 1:
+      estacao = "inverno";
+      break;
+    case mes == 12:
+      estacao = "inverno";
+      break;
+    case mes == 2:
+      estacao = "inverno";
+      break;
+    case mes == 3:mensagem = "Dados Inválidos"
+    case mes == 5:
+      estacao = "primavera";
+      break;
+    case mes == 6:
+      estacao = "primavera";
+      break;
+    case mes == 7:
+      estacao = "verao";
+      break;
+    case mes == 8:
+      estacao = "verao";
+      break;
+    case mes == 9:
+      estacao = "verao";
+      break;
+    case mes == 10:
+      estacao = "outono";
+      break;
+    case mes == 11:
+      estacao = "outono";
+      break;
+  }
 
+  mensagem = `Você está na estação ${estacao}`;
+  
+
+  //SAÍDA
+  alert(mensagem);
 </script>
